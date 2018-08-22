@@ -9,7 +9,14 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content=" Blog Archives Recent Posts ">
+  <meta name="description" content="fd@ubuntu:~$
+ls fd&nbsp; fd.c&nbsp;
+flag fd@ubuntu:~$
+cat fd.c #include
+&lt;stdio.h&gt; #include
+&lt;stdlib.h&gt; #include
+&lt;string.h&gt; char
+buf &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +73,193 @@
       <div class="blog-index">
   
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2018/08/22/pwnable-dot-kr-fd/">[pwnable.kr] Fd</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2018-08-22T09:31:43+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2018</span></span> <span class='time'>9:31 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><br /></p>
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">fd@ubuntu:~$
+ls<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">fd<span style="mso-spacerun: yes;">&nbsp; </span>fd.c<span style="mso-spacerun: yes;">&nbsp;
+</span>flag<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">fd@ubuntu:~$
+cat fd.c<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">#include
+&lt;stdio.h&gt;<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">#include
+&lt;stdlib.h&gt;<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">#include
+&lt;string.h&gt;<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">char
+buf[32];<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">int
+main(int argc, char* argv[], char* envp[]){<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(argc&lt;2){<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>printf("pass argv[1] a
+number\n");<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return 0;<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int fd = atoi( argv[1] ) - 0x1234;<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int len = 0;<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>len = read(fd, buf, 32);<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(!strcmp("LETMEWIN\n",
+buf)){<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>printf("good job
+:)\n");<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>system("/bin/cat
+flag");<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>exit(0);<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>printf("learn about Linux file
+IO\n");<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return 0;<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">}<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">fd@ubuntu:~$
+./fd 4660<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">LETMEWIN<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">good job
+:)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mommy! I
+think I know what a file descriptor is!!<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">---<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">fd=0</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">就是</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">stdin<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">參數給</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0x1234=4660<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">從鍵盤輸入</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">LETMEWIN</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">即可</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><o:p></o:p></span></div>
+
+
+<p><br /></p>
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
     <a href="/blog/archives">Blog Archives</a>
@@ -77,6 +271,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/08/22/pwnable-dot-kr-fd/">[pwnable.kr] Fd</a>
+      </li>
     
   </ul>
 </section>
