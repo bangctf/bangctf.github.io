@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[BangCTF]]></title>
   <link href="http://bangctf.github.io/atom.xml" rel="self"/>
   <link href="http://bangctf.github.io/"/>
-  <updated>2018-08-22T09:39:34+08:00</updated>
+  <updated>2018-08-22T09:42:44+08:00</updated>
   <id>http://bangctf.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Bang]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
