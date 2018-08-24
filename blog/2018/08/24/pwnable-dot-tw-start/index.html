@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>BangCTF</title>
+  <title>[pwnable.tw] Start - BangCTF</title>
   <meta name="author" content="Bang">
 
   
@@ -20,7 +20,7 @@ of section . &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://bangctf.github.io/">
+  <link rel="canonical" href="http://bangctf.github.io/blog/2018/08/24/pwnable-dot-tw-start/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="BangCTF" type="application/atom+xml">
@@ -65,15 +65,12 @@ of section . &hellip;">
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2018/08/24/pwnable-dot-tw-start/">[pwnable.tw] Start</a></h1>
+      <h1 class="entry-title">[pwnable.tw] Start</h1>
     
     
       <p class="meta">
@@ -89,7 +86,7 @@ of section . &hellip;">
   </header>
 
 
-  <div class="entry-content"><p><br /></p>
+<div class="entry-content"><p><br /></p>
 
 <div class="MsoNormal">
 <span lang="EN-US" style="font-family: &quot;Courier New&quot;;">s89162504@ubuntu:~/pwn/pwn.tw/start$
@@ -349,205 +346,44 @@ r<span style='color:#308080; '>.</span>interactive<span style='color:#308080; '>
 </pre>
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Bang</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2018-08-24T14:29:00+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2018</span></span> <span class='time'>2:29 pm</span></time>
+      
+
+
+    </p>
     
-      <h1 class="entry-title"><a href="/blog/2018/08/22/pwnable-dot-kr-fd/">[pwnable.kr] Fd</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2018-08-22T09:46:54+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>22</span><span class='date-suffix'>nd</span>, <span class='date-year'>2018</span></span> <span class='time'>9:46 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><br /></p>
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">fd@ubuntu:~$
-ls<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">fd<span style="mso-spacerun: yes;">&nbsp; </span>fd.c<span style="mso-spacerun: yes;">&nbsp;
-</span>flag<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">fd@ubuntu:~$
-cat fd.c<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">#include
-&lt;stdio.h&gt;<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">#include
-&lt;stdlib.h&gt;<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">#include
-&lt;string.h&gt;<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">char
-buf[32];<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">int
-main(int argc, char* argv[], char* envp[]){<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(argc&lt;2){<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>printf("pass argv[1] a
-number\n");<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return 0;<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int fd = atoi( argv[1] ) - 0x1234;<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>int len = 0;<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>len = read(fd, buf, 32);<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>if(!strcmp("LETMEWIN\n",
-buf)){<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>printf("good job
-:)\n");<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>system("/bin/cat
-flag");<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>exit(0);<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>printf("learn about Linux file
-IO\n");<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>return 0;<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<br /></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">}<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<br /></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">fd@ubuntu:~$
-./fd 4660<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">LETMEWIN<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">good job
-:)<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mommy! I
-think I know what a file descriptor is!!<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<br /></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">---<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<br /></div>
-
-
-<div class="MsoNormal">
-<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">fd=0</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">就是</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">stdin<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">參數給</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0x1234=4660<o:p></o:p></span></div>
-
-
-<div class="MsoNormal">
-<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">從鍵盤輸入</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">LETMEWIN</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">即可</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><o:p></o:p></span></div>
-
-
-<p><br /></p>
+      <div class="sharing">
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2018/08/22/pwnable-dot-kr-fd/" title="Previous Post: [pwnable.kr] fd">&laquo; [pwnable.kr] fd</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -571,6 +407,7 @@ think I know what a file descriptor is!!<o:p></o:p></span></div>
 
   
 </aside>
+
 
     </div>
   </div>
