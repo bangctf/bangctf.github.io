@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>[pwnable.kr] Flag - BangCTF</title>
+  <meta name="author" content="Bang">
+
+  
+  <meta name="description" content="wget
+https://github.com/upx/upx/releases/download/v3.95/upx-3.95-amd64_linux.tar.xz ./upx -d
+../flag 進gdb找字串即可 [---------------------------------- &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://bangctf.github.io/blog/2018/08/28/pwnable-dot-kr-flag/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BangCTF" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BangCTF</a></h1>
+  
+    <h2>To pwn or not to pwn</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="bangctf.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">[pwnable.kr] Flag</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2018-08-28T08:43:05+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2018</span></span> <span class='time'>8:43 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><br /></p>
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">wget
+https://github.com/upx/upx/releases/download/v3.95/upx-3.95-amd64_linux.tar.xz<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">./upx -d
+../flag<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">進</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">gdb</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">找字串即可</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">[----------------------------------registers-----------------------------------]<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RAX:
+0x6c96b0 --&gt; 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RBX:
+0x401ae0 (&lt;__libc_csu_fini&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>rbx)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RCX: 0x8<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RDX:
+0x496628 ("UPX...? sounds like a delivery service :)")<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RSI: 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RDI: 0x4<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RBP:
+0x7fffffffe330 --&gt; 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RSP:
+0x7fffffffe320 --&gt; 0x401a50 (&lt;__libc_csu_init&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp;
+</span>r14)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RIP:
+0x40118b (&lt;main+39&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>rax,QWORD PTR [rbp-0x8])<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R8 : 0x1<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R9 : 0x3<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R10: 0x22
+('"')<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R11: 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R12:
+0x401a50 (&lt;__libc_csu_init&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>r14)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R13: 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R14: 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R15: 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">EFLAGS:
+0x206 (carry PARITY adjust zero sign trap INTERRUPT direction overflow)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">[-------------------------------------code-------------------------------------]<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x40117b &lt;main+23&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>call<span style="mso-spacerun: yes;">&nbsp;&nbsp;
+</span>0x4099d0 &lt;malloc&gt;<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x401180 &lt;main+28&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>QWORD PTR [rbp-0x8],rax<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x401184 &lt;main+32&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>rdx,QWORD PTR [rip+0x2c0ee5]<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span># 0x6c2070 &lt;flag&gt;<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">=&gt;
+0x40118b &lt;main+39&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>rax,QWORD PTR [rbp-0x8]<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x40118f &lt;main+43&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>rsi,rdx<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x401192 &lt;main+46&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>rdi,rax<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x401195 &lt;main+49&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>call<span style="mso-spacerun: yes;">&nbsp;&nbsp;
+</span>0x400320<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x40119a &lt;main+54&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>eax,0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">[------------------------------------stack-------------------------------------]<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0000|
+0x7fffffffe320 --&gt; 0x401a50 (&lt;__libc_csu_init&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp;
+</span>r14)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0008|
+0x7fffffffe328 --&gt; 0x6c96b0 --&gt; 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0016|
+0x7fffffffe330 --&gt; 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0024|
+0x7fffffffe338 --&gt; 0x401344 (&lt;__libc_start_main+404&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>edi,eax)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0032|
+0x7fffffffe340 --&gt; 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0040|
+0x7fffffffe348 --&gt; 0x100000000<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0048|
+0x7fffffffe350 --&gt; 0x7fffffffe428 --&gt; 0x7fffffffe6a4 ("/home/s89162504/pwn/pwn.kr/flag/flag")<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0056|
+0x7fffffffe358 --&gt; 0x401164 (&lt;main&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp;
+</span>rbp)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">[------------------------------------------------------------------------------]<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">Legend:
+code, data, rodata, value<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0x000000000040118b
+in main ()<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">gdb-peda$<o:p></o:p></span></div>
+
+
+<p><br /></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Bang</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2018-08-28T08:43:05+08:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>28</span><span class='date-suffix'>th</span>, <span class='date-year'>2018</span></span> <span class='time'>8:43 am</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2018/08/27/pwnable-dot-kr-bof/" title="Previous Post: [pwnable.kr] bof">&laquo; [pwnable.kr] bof</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/08/28/pwnable-dot-kr-flag/">[pwnable.kr] Flag</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/08/27/pwnable-dot-kr-bof/">[pwnable.kr] Bof</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/08/27/pwnable-dot-kr-collision/">[pwnable.kr] Collision</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/08/24/pwnable-dot-tw-orw/">[pwnable.tw] Orw</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/08/24/pwnable-dot-tw-start/">[pwnable.tw] Start</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2018/08/22/pwnable-dot-kr-fd/">[pwnable.kr] Fd</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2018 - Bang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

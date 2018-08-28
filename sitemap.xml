@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://bangctf.github.io/blog/2018/08/28/pwnable-dot-kr-flag/</loc>
+<lastmod>2018-08-28T08:43:05+08:00</lastmod>
+</url>
+<url>
 <loc>http://bangctf.github.io/blog/2018/08/27/pwnable-dot-kr-bof/</loc>
 <lastmod>2018-08-27T15:10:57+08:00</lastmod>
 </url>

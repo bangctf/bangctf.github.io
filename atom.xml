@@ -4,7 +4,7 @@
   <title><![CDATA[BangCTF]]></title>
   <link href="http://bangctf.github.io/atom.xml" rel="self"/>
   <link href="http://bangctf.github.io/"/>
-  <updated>2018-08-27T15:11:32+08:00</updated>
+  <updated>2018-08-28T08:43:36+08:00</updated>
   <id>http://bangctf.github.io/</id>
   <author>
     <name><![CDATA[Bang]]></name>
@@ -12,6 +12,241 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[[pwnable.kr] Flag]]></title>
+    <link href="http://bangctf.github.io/blog/2018/08/28/pwnable-dot-kr-flag/"/>
+    <updated>2018-08-28T08:43:05+08:00</updated>
+    <id>http://bangctf.github.io/blog/2018/08/28/pwnable-dot-kr-flag</id>
+    <content type="html"><![CDATA[<p><br /></p>
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">wget
+https://github.com/upx/upx/releases/download/v3.95/upx-3.95-amd64_linux.tar.xz<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">./upx -d
+../flag<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">進</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;">gdb</span><span style="font-family: &quot;新細明體&quot;,serif; mso-ascii-font-family: &quot;Courier New&quot;; mso-bidi-font-family: &quot;Courier New&quot;; mso-fareast-font-family: 新細明體; mso-fareast-theme-font: minor-fareast; mso-hansi-font-family: &quot;Courier New&quot;;">找字串即可</span><span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<br /></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">[----------------------------------registers-----------------------------------]<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RAX:
+0x6c96b0 --&gt; 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RBX:
+0x401ae0 (&lt;__libc_csu_fini&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>rbx)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RCX: 0x8<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RDX:
+0x496628 ("UPX...? sounds like a delivery service :)")<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RSI: 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RDI: 0x4<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RBP:
+0x7fffffffe330 --&gt; 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RSP:
+0x7fffffffe320 --&gt; 0x401a50 (&lt;__libc_csu_init&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp;
+</span>r14)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">RIP:
+0x40118b (&lt;main+39&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>rax,QWORD PTR [rbp-0x8])<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R8 : 0x1<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R9 : 0x3<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R10: 0x22
+('"')<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R11: 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R12:
+0x401a50 (&lt;__libc_csu_init&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>r14)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R13: 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R14: 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">R15: 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">EFLAGS:
+0x206 (carry PARITY adjust zero sign trap INTERRUPT direction overflow)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">[-------------------------------------code-------------------------------------]<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x40117b &lt;main+23&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>call<span style="mso-spacerun: yes;">&nbsp;&nbsp;
+</span>0x4099d0 &lt;malloc&gt;<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x401180 &lt;main+28&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>QWORD PTR [rbp-0x8],rax<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x401184 &lt;main+32&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>rdx,QWORD PTR [rip+0x2c0ee5]<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span># 0x6c2070 &lt;flag&gt;<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">=&gt;
+0x40118b &lt;main+39&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp; </span>rax,QWORD PTR [rbp-0x8]<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x40118f &lt;main+43&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>rsi,rdx<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x401192 &lt;main+46&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>rdi,rax<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x401195 &lt;main+49&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>call<span style="mso-spacerun: yes;">&nbsp;&nbsp;
+</span>0x400320<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;"><span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>0x40119a &lt;main+54&gt;:<span style="mso-spacerun: yes;">&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>eax,0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">[------------------------------------stack-------------------------------------]<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0000|
+0x7fffffffe320 --&gt; 0x401a50 (&lt;__libc_csu_init&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp; </span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp;
+</span>r14)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0008|
+0x7fffffffe328 --&gt; 0x6c96b0 --&gt; 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0016|
+0x7fffffffe330 --&gt; 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0024|
+0x7fffffffe338 --&gt; 0x401344 (&lt;__libc_start_main+404&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp; </span>mov<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;
+</span>edi,eax)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0032|
+0x7fffffffe340 --&gt; 0x0<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0040|
+0x7fffffffe348 --&gt; 0x100000000<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0048|
+0x7fffffffe350 --&gt; 0x7fffffffe428 --&gt; 0x7fffffffe6a4 ("/home/s89162504/pwn/pwn.kr/flag/flag")<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0056|
+0x7fffffffe358 --&gt; 0x401164 (&lt;main&gt;:<span style="mso-spacerun: yes;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>push<span style="mso-spacerun: yes;">&nbsp;&nbsp;
+</span>rbp)<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">[------------------------------------------------------------------------------]<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">Legend:
+code, data, rodata, value<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">0x000000000040118b
+in main ()<o:p></o:p></span></div>
+
+
+<div class="MsoNormal">
+<span lang="EN-US" style="font-family: &quot;Courier New&quot;;">gdb-peda$<o:p></o:p></span></div>
+
+
+<p><br /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[pwnable.kr] Bof]]></title>
